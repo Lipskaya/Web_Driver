@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Selenium Test Suite" verbose="2" parallel="false" thread-count="1">
+  <!--comment -->
+  <test name="TestLogin">
+
+   <classes>
+     <class name="Itacademy.Test.LoginTest" />
+
+   </classes>
+
+ </test>
+ <test name="TestEmails">
+
+   <classes>
+     <class name="Itacademy.Test.SendMailTest"/>
+   </classes>
+
+ </test>
+
+</suite>
