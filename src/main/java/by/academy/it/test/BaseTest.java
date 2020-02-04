@@ -1,4 +1,4 @@
-package Itacademy.Test;
+package by.academy.it.test;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.UnexpectedAlertBehaviour;

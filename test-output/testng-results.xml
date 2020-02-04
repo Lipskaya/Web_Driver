@@ -2,56 +2,56 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="My Selenium Test Suite" duration-ms="42981" started-at="2020-02-01T17:16:28 MSK" finished-at="2020-02-01T17:17:11 MSK">
+  <suite name="My Selenium Test Suite for mail.ru mail" duration-ms="42501" started-at="2020-02-05T00:06:03 MSK" finished-at="2020-02-05T00:06:46 MSK">
     <groups>
     </groups>
-    <test name="TestLogin" duration-ms="18676" started-at="2020-02-01T17:16:28 MSK" finished-at="2020-02-01T17:16:47 MSK">
-      <class name="Itacademy.Test.LoginTest">
-        <test-method status="PASS" signature="loginToMailTest()[pri:1, instance:Itacademy.Test.LoginTest@3498ed]" name="loginToMailTest" duration-ms="15209" started-at="2020-02-01T17:16:28 MSK" finished-at="2020-02-01T17:16:44 MSK">
+    <test name="TestLogin" duration-ms="17941" started-at="2020-02-05T00:06:03 MSK" finished-at="2020-02-05T00:06:21 MSK">
+      <class name="by.academy.it.test.LoginTest">
+        <test-method status="PASS" signature="loginToMailTest()[pri:1, instance:by.academy.it.test.LoginTest@3498ed]" name="loginToMailTest" duration-ms="14059" started-at="2020-02-05T00:06:03 MSK" finished-at="2020-02-05T00:06:17 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToMailTest -->
-        <test-method status="PASS" signature="negativeLoginToMailTest()[pri:2, instance:Itacademy.Test.LoginTest@3498ed]" name="negativeLoginToMailTest" duration-ms="3432" started-at="2020-02-01T17:16:44 MSK" finished-at="2020-02-01T17:16:47 MSK">
+        <test-method status="PASS" signature="negativeLoginToMailTest()[pri:2, instance:by.academy.it.test.LoginTest@3498ed]" name="negativeLoginToMailTest" duration-ms="3854" started-at="2020-02-05T00:06:17 MSK" finished-at="2020-02-05T00:06:21 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLoginToMailTest -->
-      </class> <!-- Itacademy.Test.LoginTest -->
+      </class> <!-- by.academy.it.test.LoginTest -->
     </test> <!-- TestLogin -->
-    <test name="TestEmails" duration-ms="24259" started-at="2020-02-01T17:16:47 MSK" finished-at="2020-02-01T17:17:11 MSK">
-      <class name="Itacademy.Test.SendMailTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="setup" is-config="true" duration-ms="10839" started-at="2020-02-01T17:16:17 MSK" finished-at="2020-02-01T17:16:28 MSK">
+    <test name="TestEmails" duration-ms="24529" started-at="2020-02-05T00:06:21 MSK" finished-at="2020-02-05T00:06:46 MSK">
+      <class name="by.academy.it.test.SendMailTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="setup" is-config="true" duration-ms="10646" started-at="2020-02-05T00:05:52 MSK" finished-at="2020-02-05T00:06:03 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="beforeClass" is-config="true" duration-ms="4376" started-at="2020-02-01T17:16:47 MSK" finished-at="2020-02-01T17:16:51 MSK">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="beforeTest" is-config="true" duration-ms="4693" started-at="2020-02-05T00:06:21 MSK" finished-at="2020-02-05T00:06:26 MSK">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="sendMailTest()[pri:3, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="sendMailTest" duration-ms="7793" started-at="2020-02-01T17:16:51 MSK" finished-at="2020-02-01T17:16:59 MSK">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="sendMailTest()[pri:3, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="sendMailTest" duration-ms="8403" started-at="2020-02-05T00:06:26 MSK" finished-at="2020-02-05T00:06:34 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendMailTest -->
-        <test-method status="PASS" signature="sendMainNoSubjectNoBodyTest()[pri:4, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="sendMainNoSubjectNoBodyTest" duration-ms="4533" started-at="2020-02-01T17:16:59 MSK" finished-at="2020-02-01T17:17:04 MSK">
+        <test-method status="PASS" signature="sendMainNoSubjectNoBodyTest()[pri:4, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="sendMainNoSubjectNoBodyTest" duration-ms="3917" started-at="2020-02-05T00:06:34 MSK" finished-at="2020-02-05T00:06:38 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendMainNoSubjectNoBodyTest -->
-        <test-method status="PASS" signature="sendMailNoAddressTest()[pri:5, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="sendMailNoAddressTest" duration-ms="995" started-at="2020-02-01T17:17:04 MSK" finished-at="2020-02-01T17:17:05 MSK">
+        <test-method status="PASS" signature="sendMailNoAddressTest()[pri:5, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="sendMailNoAddressTest" duration-ms="941" started-at="2020-02-05T00:06:38 MSK" finished-at="2020-02-05T00:06:39 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendMailNoAddressTest -->
-        <test-method status="PASS" signature="DraftMailTest()[pri:6, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="DraftMailTest" duration-ms="4304" started-at="2020-02-01T17:17:05 MSK" finished-at="2020-02-01T17:17:09 MSK">
+        <test-method status="PASS" signature="DraftMailTest()[pri:6, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="DraftMailTest" duration-ms="5086" started-at="2020-02-05T00:06:39 MSK" finished-at="2020-02-05T00:06:44 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DraftMailTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="afterClass" is-config="true" duration-ms="2245" started-at="2020-02-01T17:17:09 MSK" finished-at="2020-02-01T17:17:11 MSK">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="afterTest" is-config="true" duration-ms="1484" started-at="2020-02-05T00:06:44 MSK" finished-at="2020-02-05T00:06:46 MSK">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Itacademy.Test.SendMailTest@6fb554cc]" name="tearDown" is-config="true" duration-ms="885" started-at="2020-02-01T17:17:11 MSK" finished-at="2020-02-01T17:17:12 MSK">
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:by.academy.it.test.SendMailTest@6fb554cc]" name="tearDown" is-config="true" duration-ms="891" started-at="2020-02-05T00:06:46 MSK" finished-at="2020-02-05T00:06:46 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Itacademy.Test.SendMailTest -->
+      </class> <!-- by.academy.it.test.SendMailTest -->
     </test> <!-- TestEmails -->
-  </suite> <!-- My Selenium Test Suite -->
+  </suite> <!-- My Selenium Test Suite for mail.ru mail -->
 </testng-results>

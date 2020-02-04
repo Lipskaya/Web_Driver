@@ -1,22 +1,19 @@
-package Itacademy.Test;
+package by.academy.it.test;
 
 
-import Itacademy.Page.LoginPage;
-import Itacademy.Page.MailPage;
+import by.academy.it.page.LoginPage;
+import by.academy.it.page.MailPage;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SendMailTest extends BaseTest {
 
-  public static final String TOPIC = "Test letter";
+  public static final String TOPIC = "test letter";
   public static final String TEXT = "Some message ";
   public static final String EMPTY = "";
   public static final String DRAFT_ADDRESS = "draft@mail.ru";
-
   private LoginPage loginPage;
   private MailPage mailPage;
 
@@ -76,7 +73,6 @@ public class SendMailTest extends BaseTest {
     //проверяем что появилось сообщение об ошибке(Не указан адрес получателя)
     Assert.assertEquals(mailPage.getNoAddressErrorMessage(), "Не указан адрес получателя");
     mailPage.closeNewEmailDialog();
-
   }
 
   @Test(priority = 6)

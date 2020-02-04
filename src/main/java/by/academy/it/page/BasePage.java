@@ -1,4 +1,4 @@
-package Itacademy.Page;
+package by.academy.it.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -26,9 +26,9 @@ public class BasePage {
   }
 
   // Ждет пока указанный элемент не появится на странице и не станет видимым (опрос элемента происходит в соответствии с настройками wait)
-  public WebElement waitVisible(By by) {
-    wait.until(ExpectedConditions.presenceOfElementLocated(by));
-    return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+  public WebElement waitVisible(String xpathLocator) {
+    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpathLocator)));
+    return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
   }
 
   // from here: https://stackoverflow.com/questions/15237129/webdriverwait-for-an-element-attribute-to-change

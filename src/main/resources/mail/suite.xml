@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="My Selenium Test Suite" verbose="2" parallel="false" thread-count="1">
+<suite name="My Selenium Test Suite for mail.ru mail" verbose="2" parallel="false" thread-count="1">
   <!--comment -->
   <test name="TestLogin">
 
    <classes>
-     <class name="Itacademy.Test.LoginTest" />
+     <class name="by.academy.it.test.LoginTest" />
 
    </classes>
 
@@ -13,7 +13,7 @@
  <test name="TestEmails">
 
    <classes>
-     <class name="Itacademy.Test.SendMailTest"/>
+     <class name="by.academy.it.test.SendMailTest"/>
    </classes>
 
  </test>
