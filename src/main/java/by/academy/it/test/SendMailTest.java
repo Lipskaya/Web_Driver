@@ -76,7 +76,7 @@ public class SendMailTest extends BaseTest {
   }
 
   @Test(priority = 6)
-  public void DraftMailTest() {
+  public void draftMailTest() {
     //создаем черновик письма и сохрняем его
     mailPage.createDraftMail(DRAFT_ADDRESS, TOPIC, TEXT);
     mailPage.closeNewEmailDialog();
