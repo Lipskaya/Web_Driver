@@ -1,6 +1,8 @@
 package by.academy.it.test;
 
 
+import by.academy.it.model.Letter;
+import by.academy.it.model.User;
 import by.academy.it.page.LoginPage;
 import by.academy.it.page.MailPage;
 import org.testng.Assert;
@@ -23,7 +25,11 @@ public class SendMailTest extends BaseTest {
     getDriver().get(LOGIN_URL);
     loginPage = new LoginPage(getDriver());
     mailPage = new MailPage(getDriver());
-    loginPage.doLogin(LOGIN, PASSWORD);
+    User user = new User();
+    user.setLogin(LOGIN);
+    user.setPassword(PASSWORD);
+
+    loginPage.doLogin(user);
   }
 
   @AfterTest
@@ -34,9 +40,13 @@ public class SendMailTest extends BaseTest {
   }
 
   @Test(priority = 3)
-  //отправка письма
+  //отправка письма на свой же адрес (сама себе)
   public void sendMailTest() {
-    mailPage.sendNewMail(LOGIN, TOPIC, TEXT);
+    Letter letter = new Letter();
+    letter.setAddress(LOGIN);
+    letter.setTopic(TOPIC);
+    letter.setMessage(TEXT);
+    mailPage.sendNewMail(letter);
     //переходим в папку отправленные
     mailPage.goToSentEmails();
     //проверям есть ли письмо с указанным адресом в текущей папке
@@ -52,7 +62,11 @@ public class SendMailTest extends BaseTest {
 
   @Test(priority = 4)
   public void sendMainNoSubjectNoBodyTest() {
-    mailPage.sendNewMail(LOGIN, EMPTY, EMPTY);
+    Letter letter = new Letter();
+    letter.setAddress(LOGIN);
+    letter.setTopic(EMPTY);
+    letter.setMessage(EMPTY);
+    mailPage.sendNewMail(letter);
     // заходим в папку отправленные
     mailPage.goToSentEmails();
     //проверям есть ли письмо с указанным адресом в текущей папке(Отправленные)
@@ -69,7 +83,11 @@ public class SendMailTest extends BaseTest {
   @Test(priority = 5)
   public void sendMailNoAddressTest() {
     //отправляем письмо без указания адреса
-    mailPage.sendNewMail(EMPTY, TOPIC, TEXT);
+    Letter letter = new Letter();
+    letter.setAddress(EMPTY);
+    letter.setTopic(TOPIC);
+    letter.setMessage(TEXT);
+    mailPage.sendNewMail(letter);
     //проверяем что появилось сообщение об ошибке(Не указан адрес получателя)
     Assert.assertEquals(mailPage.getNoAddressErrorMessage(), "Не указан адрес получателя");
     mailPage.closeNewEmailDialog();

@@ -1,5 +1,6 @@
 package by.academy.it.page;
 
+import by.academy.it.model.User;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +26,13 @@ public class LoginPage extends BasePage {
     enterLogin(login);
     //вводим пароль
     enterPassword(password);
+    waitVisible(LOGGED_USER_MAIL);
+  }
+  public void doLogin(User user) {
+    //вызвали метод для ввода логина
+    enterLogin(user.getLogin());
+    //вводим пароль
+    enterPassword(user.getPassword());
     waitVisible(LOGGED_USER_MAIL);
   }
 

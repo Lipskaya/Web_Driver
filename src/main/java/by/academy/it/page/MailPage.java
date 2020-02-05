@@ -1,5 +1,6 @@
 package by.academy.it.page;
 
+import by.academy.it.model.Letter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -54,7 +55,24 @@ public class MailPage extends BasePage {
 
     closeSentEmailDialog();
   }
+  public void sendNewMail(Letter letter) {
 
+    newMail();
+    fillAddres(letter.getAddress());
+    fillTopic(letter.getTopic());
+    fillMailText(letter.getMessage());
+    sendMail();
+    if (letter.getAddress().trim().isEmpty()) {
+      return;
+    }
+    if (letter.getMessage().trim().isEmpty()) {
+      // подтверждаем отправку пустого письма
+      WebElement sendEmtyButton = waitVisible(SEND_EMPTY_BOOTON);
+      sendEmtyButton.click();
+    }
+
+    closeSentEmailDialog();
+  }
   // создает и сохраняет черновик письма
   public void createDraftMail(String addres, String topic, String text) {
     newMail();

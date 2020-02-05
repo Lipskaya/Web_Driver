@@ -1,5 +1,6 @@
 package by.academy.it.test;
 
+import by.academy.it.model.User;
 import by.academy.it.page.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,7 +11,11 @@ public class LoginTest extends BaseTest {
   public void loginToMailTest() {
     getDriver().get(LOGIN_URL);
     LoginPage loginPage = new LoginPage(getDriver());
-    loginPage.doLogin(LOGIN, PASSWORD);
+    User user = new User();
+    user.setLogin(LOGIN);
+    user.setPassword(PASSWORD);
+
+    loginPage.doLogin(user);
     Assert.assertEquals(loginPage.getLoggedUserMail(), LOGIN,
         "Testing of logging with valid data is failed");
     loginPage.doLogout();
