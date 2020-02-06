@@ -17,6 +17,7 @@ public class BaseTest {
   public static final String INVALID_PASSWORD = "&YPviFA1zpu1po";
   public static final String LOGIN_URL = "https://account.mail.ru/login";
 
+  public static final String CLOUD_URL = "https://cloud.mail.ru";
 
   public static WebDriver driver = null;
 

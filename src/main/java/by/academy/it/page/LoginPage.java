@@ -7,14 +7,14 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
 
-  private static final String LOGIN_INPUT_LOCATOR = "//*[contains(@name, 'Login')] ";
+  private static final String LOGIN_INPUT_LOCATOR = "//*[contains(@name,'Login')]";
   private static final String ENTER_PASSWORD_BUTTON = "//button ";
-  private static final String PASSWORD_FIELD = "//*[contains(@name, 'Password') ] ";
-  private static final String ENTER_BUTTON = "//*[contains(@type, 'submit') ] ";
-  private static final String LOGOUT_LINK = "//*[@id='PH_logoutLink'] ";
+  private static final String PASSWORD_FIELD = "//*[contains(@name,'Password')]";
+  private static final String ENTER_BUTTON = "//*[contains(@type,'submit')]";
+  private static final String LOGOUT_LINK = "//*[@id='PH_logoutLink']";
   private static final String LOGIN_LINK = "//*[@id='PH_authLink']";
   private static final String LOGGED_USER_MAIL = "//*[@id='PH_user-email']";
-  private static final String LOGIN_ERROR_MESSAGE = "//*[@data-test-id='error-footer-text'] ";
+  private static final String LOGIN_ERROR_MESSAGE = "//*[@data-test-id='error-footer-text']";
 
   public LoginPage(WebDriver driver) {
     super(driver);

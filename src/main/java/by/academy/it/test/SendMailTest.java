@@ -21,7 +21,7 @@ public class SendMailTest extends BaseTest {
 
   @BeforeTest
   public void beforeTest() {
-    System.out.println("beforeClass");
+
     getDriver().get(LOGIN_URL);
     loginPage = new LoginPage(getDriver());
     mailPage = new MailPage(getDriver());
@@ -34,7 +34,7 @@ public class SendMailTest extends BaseTest {
 
   @AfterTest
   public void afterTest() {
-    System.out.println("afterClass");
+
     // выходим из почты
     loginPage.doLogout();
   }
