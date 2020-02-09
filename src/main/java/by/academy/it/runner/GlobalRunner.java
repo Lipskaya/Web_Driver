@@ -8,7 +8,7 @@ import org.testng.collections.Lists;
 /**
  * CommonRunner for all test siute files
  */
-public class CommonRunner {
+public class GlobalRunner {
 
   public static void main(String[] args) {
     TestNG testng = new TestNG();

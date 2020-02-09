@@ -1,9 +1,11 @@
 package by.academy.it.page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
@@ -17,8 +19,9 @@ public class BasePage {
   public BasePage(WebDriver driver) {
     this.driver = driver;
     wait = new WebDriverWait(driver, 10, 500)
-        .withMessage("Element was not found in X seconds")
-        .ignoring(StaleElementReferenceException.class);
+        .withMessage("Element was not found in X seconds");
+ //       .ignoring(StaleElementReferenceException.class);
+ //   .ignoring(ElementClickInterceptedException.class);
   }
 
   public WebDriver getDriver() {
@@ -45,5 +48,13 @@ public class BasePage {
       }
     });
   }
-
+  public void waitStaleness(String xpath){
+    wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.xpath(xpath))));
+  }
+  //клик правой кнопкой мыши по элементу
+  public void doRightMouseClick (String xPath){
+    Actions builder = new Actions(getDriver());
+    WebElement element = driver.findElement(By.xpath(xPath));
+    builder.contextClick(element).build().perform();
+  }
 }

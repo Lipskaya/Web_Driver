@@ -3,19 +3,13 @@
 <suite name="My Selenium Test Suite for mail.ru mail" verbose="2" parallel="false" thread-count="1">
   <!--comment -->
   <test name="TestLogin">
-
    <classes>
      <class name="by.academy.it.test.LoginTest" />
-
    </classes>
-
  </test>
  <test name="TestEmails">
-
    <classes>
      <class name="by.academy.it.test.SendMailTest"/>
    </classes>
-
  </test>
-
 </suite>
