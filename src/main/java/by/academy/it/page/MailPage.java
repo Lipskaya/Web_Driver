@@ -12,7 +12,6 @@ public class MailPage extends BasePage {
   private static final String MAIL_TEXT_FIELD = "//div[@role='textbox']";
   private static final String SEND_BUTTON = "//span[text()=\"Отправить\"]";
   private static final String SENT_EMAILS_BUTTON = "//a[@href=\"/sent/\"]";
-  private static final String EMAIL_FROM = "//span[contains(@title, 'kalacheva.tamara@bk.ru')]";
   private static final String INBOX_EMAILS_BUTTON = "//a[@href=\"/inbox/\"]";
   private static final String CLOSE_DIALOG_BUTTON = "//span[@title='Закрыть']";
   private static final String SELECT_ALL_BUTTON = "//span[@title='Выделить все']/parent::div";
@@ -31,7 +30,6 @@ public class MailPage extends BasePage {
   private static final String TRASH_FOLDER = "//a[@href='/trash/']";
   private static final String E_PREFIX = "//span[contains(@title, '";
   private static final String E_POSTFIX = "')]";
-  private static final String TITLE = "title";
 
   public MailPage(WebDriver driver) {
     super(driver);
@@ -52,11 +50,11 @@ public class MailPage extends BasePage {
       WebElement sendEmtyButton = waitVisible(SEND_EMPTY_BOOTON);
       sendEmtyButton.click();
     }
-
     closeSentEmailDialog();
   }
-  public void sendNewMail(Letter letter) {
 
+  // отправляет новое письмо
+  public void sendNewMail(Letter letter) {
     newMail();
     fillAddres(letter.getAddress());
     fillTopic(letter.getTopic());
@@ -70,9 +68,9 @@ public class MailPage extends BasePage {
       WebElement sendEmtyButton = waitVisible(SEND_EMPTY_BOOTON);
       sendEmtyButton.click();
     }
-
     closeSentEmailDialog();
   }
+
   // создает и сохраняет черновик письма
   public void createDraftMail(String addres, String topic, String text) {
     newMail();
@@ -201,7 +199,6 @@ public class MailPage extends BasePage {
     waitVisible(NOTIFY_MESSAGE_TEXT);
     //закрыть уведомление
     waitVisible(CLOSE_NOTIFY_MESSAGE).click();
-
   }
 
   // получает текст сообщения, что папка пуста

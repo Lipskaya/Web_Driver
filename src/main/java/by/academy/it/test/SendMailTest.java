@@ -21,20 +21,17 @@ public class SendMailTest extends BaseTest {
 
   @BeforeTest
   public void beforeTest() {
-
     getDriver().get(LOGIN_URL);
     loginPage = new LoginPage(getDriver());
     mailPage = new MailPage(getDriver());
     User user = new User();
     user.setLogin(LOGIN);
     user.setPassword(PASSWORD);
-
     loginPage.doLogin(user);
   }
 
   @AfterTest
   public void afterTest() {
-
     // выходим из почты
     loginPage.doLogout();
   }

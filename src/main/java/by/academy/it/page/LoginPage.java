@@ -40,24 +40,22 @@ public class LoginPage extends BasePage {
     //вводим пароль
     WebElement passwordField = waitVisible(PASSWORD_FIELD);
     passwordField.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
     passwordField.sendKeys(password);
     // ищем кнопку для входа на страницу и жмем ее
     WebElement enterButton = waitVisible(ENTER_BUTTON);
     enterButton.click();
-
   }
 
   public void enterLogin(String login) {
     WebElement loginField = waitVisible(LOGIN_INPUT_LOCATOR);
     loginField.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
     loginField.sendKeys(login);
-
     // нажимаем по enter password кнопке
     WebElement enterPasswordButton = waitVisible(ENTER_PASSWORD_BUTTON);
     enterPasswordButton.click();
   }
 
+  // выходим из почты
   public void doLogout() {
     WebElement logoutButton = waitVisible(LOGOUT_LINK);
     logoutButton.click();
@@ -75,6 +73,4 @@ public class LoginPage extends BasePage {
     WebElement errorMessage = waitVisible(LOGIN_ERROR_MESSAGE);
     return errorMessage.getText();
   }
-
-
 }

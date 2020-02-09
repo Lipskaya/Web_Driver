@@ -14,7 +14,6 @@ public class LoginTest extends BaseTest {
     User user = new User();
     user.setLogin(LOGIN);
     user.setPassword(PASSWORD);
-
     loginPage.doLogin(user);
     Assert.assertEquals(loginPage.getLoggedUserMail(), LOGIN,
         "Testing of logging with valid data is failed");
