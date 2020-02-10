@@ -134,7 +134,7 @@ public class CloudPage extends BasePage {
   //возвращает URL на расшаренный файл
   public String getShareLink(String fileName) {
     WebElement file = waitVisible(SHARE_PREFIX + fileName + SHARE_POSTFIX);
-    file.findElement(By.xpath(SELECT_FILE_CHECKBOX));
+    file.findElement(By.xpath(SELECT_FILE_CHECKBOX)).click();
     file.findElement(By.xpath(PUBLISH_BUTTON)).click();
     return waitVisible(COPY_LINK).getAttribute("value");
   }
