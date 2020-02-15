@@ -4,12 +4,12 @@
   <!--comment -->
   <test name="TestLogin">
    <classes>
-     <class name="by.academy.it.test.LoginTest" />
+     <class name="by.academy.it.test.mail.LoginTest" />
    </classes>
  </test>
  <test name="TestEmails">
    <classes>
-     <class name="by.academy.it.test.SendMailTest"/>
+     <class name="by.academy.it.test.mail.SendMailTest"/>
    </classes>
  </test>
 </suite>

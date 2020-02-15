@@ -4,7 +4,7 @@
   <!--comment -->
   <test name="CloudTest">
    <classes>
-     <class name="by.academy.it.test.CloudTest" />
+     <class name="by.academy.it.test.cloud.CloudTest" />
    </classes>
  </test>
 </suite>
