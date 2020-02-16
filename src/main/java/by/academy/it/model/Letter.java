@@ -1,6 +1,7 @@
 package by.academy.it.model;
 
 public class Letter {
+
   private String address;
   private String topic;
   private String message;

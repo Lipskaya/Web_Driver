@@ -6,11 +6,11 @@ import org.apache.log4j.PropertyConfigurator;
 // Класс написан просто для примера. Целесообразнее вызывать логгер и его методы напрямую в классе.
 public class Log {
 
+  private static final Logger logger = Logger.getLogger("by.academy.it");
+
   static {
     PropertyConfigurator.configureAndWatch("log4j/log4j.properties");
   }
-
-  private  static final Logger logger = Logger.getLogger("by.academy.it");
 
   public static void info(Logger log, Object message) {
     log.info(message);
@@ -35,7 +35,6 @@ public class Log {
   public static void error(Object message) {
     logger.error(message);
   }
-
 
 
   public static void debugStart(Logger log, Object... params) {

@@ -1,6 +1,7 @@
 package by.academy.it.page;
 
 public class Constants {
+
   public static final String LOGIN = "kalacheva.tamara@bk.ru";
   public static final String PASSWORD = "&YPviFA1zpu1";
   public static final String INVALID_LOGIN = "kalachevaaaa.tamara@bk.ru";

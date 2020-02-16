@@ -82,7 +82,7 @@ public class Browser implements WrapsDriver {
     builder.contextClick(element).build().perform();
   }
 
-  //ждет пока не произойдет StaleElementReferenceException у элемента
+  //ждет пока не произойдет StaleElementReferenceException у элемента (ждет пока элемент не удалиться со странички Жаваскриптом и не будет добавлен на нее снова)
   public void waitStaleness(String xPath) {
     wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.xpath(xPath))));
   }

@@ -1,6 +1,5 @@
 package by.academy.it.test.cloud;
 
-import by.academy.it.framework.Browser;
 import by.academy.it.service.cloud.CloudService;
 import by.academy.it.test.BaseTest;
 import java.io.File;

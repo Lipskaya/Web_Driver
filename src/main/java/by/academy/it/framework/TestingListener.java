@@ -5,6 +5,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class TestingListener implements ITestListener {
+
   private long methodStartTime;
 
   @Override
@@ -46,7 +47,8 @@ public class TestingListener implements ITestListener {
 
   @Override
   public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-    Log.info("[TEST METHOD FAILED WITHIN SUCCESS PERCENTAGE]" + iTestResult.getName()+ " SPENT TIME(ms): "
+    Log.info("[TEST METHOD FAILED WITHIN SUCCESS PERCENTAGE]" + iTestResult.getName()
+        + " SPENT TIME(ms): "
         + (iTestResult.getEndMillis() - methodStartTime));
   }
 }

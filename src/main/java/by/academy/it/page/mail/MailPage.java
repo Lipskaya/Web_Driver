@@ -3,7 +3,6 @@ package by.academy.it.page.mail;
 import by.academy.it.model.Letter;
 import by.academy.it.page.BasePage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -140,7 +139,7 @@ public class MailPage extends BasePage {
         .pause(500)
         .build()
         .perform();
- //   sentEmailsButton.click();
+    //   sentEmailsButton.click();
     logger.debug("goToSentEmails() end");
   }
 
@@ -172,7 +171,7 @@ public class MailPage extends BasePage {
     boolean result = false;
     try {
       String xpathString = E_PREFIX + addres + E_POSTFIX;
- //     waitStaleness(xpathString);
+      //     waitStaleness(xpathString);
       WebElement email = waitVisible(xpathString);
       result = true;
     } catch (Exception e) {
