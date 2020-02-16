@@ -24,8 +24,8 @@ public class LoginService {
     validUser.setLogin(LOGIN);
     validUser.setPassword(PASSWORD);
     invalidUser = new User();
-    invalidUser.setLogin(LOGIN);
-    invalidUser.setPassword(PASSWORD);
+    invalidUser.setLogin(INVALID_LOGIN);
+    invalidUser.setPassword(INVALID_PASSWORD);
   }
 
   public User getValidUser() {
@@ -37,7 +37,9 @@ public class LoginService {
   }
 
   public void doLogin(User user) {
+    //Браузером открываем страницу на которой можно залогиниться
     browser.open(LOGIN_URL);
+    // Делегируем операцию Логина  объекту loginPage
     loginPage.doLogin(user);
   }
 

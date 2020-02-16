@@ -46,11 +46,11 @@ public class MailService {
   }
 
   public void sendNewNoSubjectNoBodyMail() {
-    mailPage.sendNewMail(validLetter);
+    mailPage.sendNewMail(noSubjectNoBodyLetter);
   }
 
   public void sendNewValidMail() {
-    mailPage.sendNewMail(noSubjectNoBodyLetter);
+    mailPage.sendNewMail(validLetter);
   }
 
   public void goToSentEmails() {
@@ -106,5 +106,4 @@ public class MailService {
   public String getExpectedNoAddressErrorMessage() {
     return "Не указан адрес получателя";
   }
-
 }

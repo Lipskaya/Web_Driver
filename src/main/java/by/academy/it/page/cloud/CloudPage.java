@@ -51,7 +51,7 @@ public class CloudPage extends BasePage {
 
   //создаем папку в облаке
   public void createNewFolder(String name) {
-    Log.debugStart(logger, name);
+   logger.debug("createNewFolder()" + name +"start");
 
     waitVisible(CREATE).click();
     waitVisible(NEW_FOLDER).click();
@@ -60,7 +60,7 @@ public class CloudPage extends BasePage {
     logger.debug("PREFIX " + NEW_FOLDER_BREADCRUMB_PREFIX);
     waitVisible(NEW_FOLDER_BREADCRUMB_PREFIX + name + NEW_FOLDER_BREADCRUMB_POSTFIX);
 
-    Log.debugEnd(logger);
+    logger.debug("createNewFolder()" + name +"end");
   }
 
   //проверяем, что папка создана
