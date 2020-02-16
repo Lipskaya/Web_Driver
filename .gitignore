@@ -1,4 +1,5 @@
 /target/
+/test-output/
 
 # Eclipse STS artifacts
 **/.settings/**
@@ -11,4 +12,7 @@
 
 # Mac OS files
 .DS_Store
+
+#log files
+*.log*
 
